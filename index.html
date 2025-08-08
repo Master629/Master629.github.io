@@ -1,81 +1,265 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"
-  </head>
-    <body>
-    <div id="container">
-        <div id="content">
-          <div id="about">
-            <h1>
-              <div style='float:left; margin-bottom:20px;'>
-                SSD TIER LIST
-              </div>
-              
-              
-              <div class="stage">
-                <div class="pyramid3d">
-                  <div class="triangle side1"></div>
-                  <div class="triangle side2"></div>
-                  <div class="triangle side3"></div>
-                  <div class="triangle side4"></div>
-                </div>
+    <title>Formal Legal Agreement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Blackout Formal -->
+    <!-- Application Structure Plan: The application is structured as a professional tool for drafting a general, formal agreement. The flow is linear and methodical, guiding the user through the essential components of a contract: 1. Defining the legal identities of the parties, 2. Detailing the scope of the agreement, 3. Outlining binding events and remedies, and 4. Generating a complete, print-ready document. This design prioritizes clarity and formal accuracy, ensuring the final output is a coherent and well-structured legal simulation. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: Formal contract clauses. -> Goal: Organize & Personalize. -> Viz/Presentation: Structured HTML input fields and textareas. -> Interaction: User input is used to dynamically populate a complex legal template. -> Justification: This is the most effective method for creating a highly customized and formal document from user-provided details. -> Library/Method: HTML/CSS/JS.
+        - Report Info: Legal document structure. -> Goal: Inform & Organize. -> Viz/Presentation: Clearly demarcated sections with formal, capital-letter legal headings. -> Interaction: Linear progression through the form fields to build the document. -> Justification: A structured form ensures all crucial data points for a professional contract are captured systematically. -> Library/Method: HTML/CSS/JS.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .contract-input {
+            background-color: #111;
+            border: 1px solid #333;
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            transition: all 0.3s ease;
+            color: #E5E7EB;
+        }
+        .contract-input:focus {
+            outline: none;
+            border-color: #0891b2;
+            box-shadow: 0 0 0 2px rgba(8, 145, 178, 0.2);
+        }
+
+        /* Print-specific styles to ensure a clean, professional printout */
+        @media print {
+            /* Hide all content by default and then make the contract content visible */
+            body, html {
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+                color: #000;
+                visibility: hidden; /* Hide everything first */
+            }
+
+            /* Make only the modal and its backdrop visible for printing */
+            #modal-backdrop, #modal, #final-contract {
+                visibility: visible !important;
+                position: static !important;
+                display: block !important;
+                width: 100% !important;
+                max-width: none !important;
+                height: auto !important;
+                max-height: none !important;
+                overflow: visible !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Hiding all non-essential elements for print */
+            .no-print, header, main {
+                display: none;
+            }
+
+            /* Applying proper document formatting to the contract text itself */
+            #final-contract {
+                font-family: 'Courier New', monospace;
+                color: #000;
+                white-space: pre-wrap;
+                width: 100%;
+                /* Using padding to create a clean, full-page look with margins */
+                padding: 1cm;
+                box-sizing: border-box;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl no-print">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-50">CONTRACTUAL AGREEMENT GENERATOR</h1>
+            <p class="mt-2 text-lg text-gray-400">A Formal Legal Document Simulation</p>
+        </header>
+
+        <main class="space-y-12">
             
-              
-              </div> 
-              <h3 style='clear:both' class="subhead">
-                <a href="https://plus.google.com/108495471566196018473/posts">SSD</a> Tier List, a simple, easy to navigate list. In alphabetical order and sorted by brand.
-              </h3>
-              
-              <section id="Quicklinks"
-              <h4>Quick Links
-                <br>
-                <ul>
-                  <li><a href="#acer">Acer</a></li>
-                  <li><a href="#adata">Adata</a></li>
-                </ul>
-              </h4>
+            <section id="introduction" class="bg-zinc-950 p-6 rounded-lg shadow-md border border-zinc-800">
+                <h2 class="text-2xl font-bold mb-3 text-gray-50">Document Preparation</h2>
+                <p class="text-gray-400">This form is for the preparation of a simulated legal agreement. Please provide the required information to draft a document concerning a specific activity and the responsibilities of the parties involved. Once completed, a final version will be generated for execution.</p>
             </section>
-                
-              
-              <section id='acer'>
-                                     <br>
-                        <h2>Acer</h2>
-                        <ul>
-                            <li>Name:SA100 <br> Interface: SATA/AHCI <br> Form Factor: 2.5<sup>in</sup> <br> Capacities: 120GB-1.92TB <br> NAND Type: TLC <br> R/W: 560/500<sub>MB/s</sub> <br> Entry-Level SATA</li>
-                            <li>Name:FA100 <br> Interface: x4 PCIe 3.0/NVMe <br> Form Factor: M.2 <br> Capacities: 128GB-2TB <br> NAND Type: TLC <br> R/W: 3300/2700<sub>MB/s</sub> <br> Entry-Level NVMe</li>
-                            <li>Name:FA200 <br> Interface: x4 PCIe 4.0/NVMe <br> Form Factor: M.2 <br> Capacities: 500GB-4TB <br> NAND Type: QLC <br> R/W: 7200/6200<sub>MB/s</sub></li>
-                            <li>Name:GM3500 <br> Interface: x4 PCIe 3.0/NVMe <br> Form Factor: M.2 <br> Capacities: 512GB-1TB <br> NAND Type: TLC <br> R/W: 3400/3000<sub>MB/s</sub> <br> Mid-Range NVMe</li>
-                            <li>Name:GM7 <br> Interface: x4 PCIe 4.0/NVMe <br> Form Factor: M.2 <br> Capacities: 512GB-2TB <br> NAND Type: TLC <br> R/W: 7400/7300<sub>MB/s</sub></li>
-                            <li>Name:GM7000 (Predator) <br> Interface: x4 PCIe 4.0/NVMe <br> Form Factor: M.2 <br> Capacities: 512GB-2TB <br> NAND Type: TLC <br> R/W: 7400/6400<sub>MB/s</sub> High-End NVMe</li>
-                            <li>Name:RE100 <br> Interface: SATA/AHCI <br> Form Factor: 2.5<sup>in</sup> <br> Capacities: 128GB-4TB <br> NAND Type: TLC <br> R/W: 560/520<sub>MB/s</sub> Entry-Level SATA</li>
-                        </ul>  
-                      </section>
 
-            <section id="adata">
-              <br>
-              <h2>Adata</h2>
-              <u1>
-                <li>{adatassd1}</li>
-              </u1>
+            <form id="contract-form" class="space-y-8">
+                <div class="bg-zinc-950 p-6 rounded-lg shadow-md border border-zinc-800">
+                    <h3 class="text-xl font-bold mb-4 text-gray-50">PARTIES AND SUBJECT MATTER</h3>
+                    <p class="text-gray-400 mb-6">Enter the full legal names of the parties and a detailed description of the activity.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="party-1" class="block text-sm font-medium text-gray-300 mb-1">Party 1</label>
+                            <input type="text" id="party-1" class="contract-input" placeholder="e.g., Jane Doe, an individual">
+                        </div>
+                        <div>
+                            <label for="party-2" class="block text-sm font-medium text-gray-300 mb-1">Party 2</label>
+                            <input type="text" id="party-2" class="contract-input" placeholder="e.g., John Smith, a corporation">
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="activity" class="block text-sm font-medium text-gray-300 mb-1">Subject Matter</label>
+                        <input type="text" id="activity" class="contract-input" placeholder="e.g., The development and deployment of new software">
+                    </div>
+                </div>
+
+                <div class="bg-zinc-950 p-6 rounded-lg shadow-md border border-zinc-800">
+                    <h3 class="text-xl font-bold mb-4 text-gray-50">COVENANTS AND BINDING EFFECT</h3>
+                    <p class="text-gray-400 mb-6">Define the specific event that establishes the binding nature of this agreement.</p>
+                    <div>
+                        <label for="binding-event" class="block text-sm font-medium text-gray-300 mb-1">Binding Event</label>
+                        <input type="text" id="binding-event" class="contract-input" placeholder="e.g., Upon the first deposit of funds into escrow">
+                    </div>
+                </div>
+
+                <div class="bg-zinc-950 p-6 rounded-lg shadow-md border border-zinc-800">
+                    <h3 class="text-xl font-bold mb-4 text-gray-50">REMEDIES FOR BREACH</h3>
+                    <p class="text-gray-400 mb-6">Outline the specific consequences for failure to uphold the terms of this agreement.</p>
+                    <div>
+                        <label for="consequence" class="block text-sm font-medium text-gray-300 mb-1">Remedy</label>
+                        <textarea id="consequence" class="contract-input" rows="4" placeholder="e.g., The defaulting party shall be responsible for all direct costs, expenses, and reasonable attorneys' fees incurred by the non-defaulting party in enforcing the terms of this Agreement."></textarea>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-950 p-6 rounded-lg shadow-md border border-zinc-800">
+                    <h3 class="text-xl font-bold mb-4 text-gray-50">JURISDICTION</h3>
+                    <p class="text-gray-400 mb-6">Enter the state where the governing law for this agreement will be applied.</p>
+                    <div>
+                        <label for="state-input" class="block text-sm font-medium text-gray-300 mb-1">State</label>
+                        <input type="text" id="state-input" class="contract-input" placeholder="e.g., California">
+                    </div>
+                </div>
+            </form>
+
+            <section id="signature" class="text-center bg-zinc-950 p-6 rounded-lg shadow-md border border-zinc-800">
+                <h3 class="text-2xl font-bold mb-3 text-gray-50">Finalize Document</h3>
+                <p class="text-gray-400 mb-6">By clicking the button below, you will generate a complete, formal agreement based on the information provided, ready for printing and signature by all parties. The document includes a simulated legal disclaimer.</p>
+                <button id="generate-btn" class="bg-sky-700 text-white font-bold py-3 px-8 rounded-lg hover:bg-sky-800 transition-colors text-lg">
+                    Generate Legal Agreement
+                </button>
             </section>
-                
-                
+        </main>
+    </div>
 
-
-          </div>
-      
+    <div id="modal-backdrop" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center p-4">
+        <div id="modal" class="bg-zinc-950 rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-zinc-800">
+            <div class="p-6 sm:p-8 border-b border-zinc-800 no-print">
+                 <h2 class="text-2xl font-bold text-gray-50">Final Legal Agreement</h2>
+            </div>
+            <div class="p-6 sm:p-8">
+                <pre id="final-contract" class="whitespace-pre-wrap text-sm text-gray-300" style="font-family: 'Courier New', monospace;"></pre>
+            </div>
+            <div class="p-4 bg-black border-t border-zinc-800 text-right no-print">
+                <button id="print-btn" class="bg-green-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-800 transition-colors mr-2">Print</button>
+                <button id="close-modal-btn" class="bg-zinc-800 text-gray-300 font-bold py-2 px-4 rounded-lg hover:bg-zinc-700 transition-colors">Close</button>
+            </div>
         </div>
-      
-      </div>
-      
-      <footer style="text-align: center; padding: 10px;">
-        &copy; <span id="currentYear"></span> Owen Lebakken | <a href="https://github.com/Master629">Github</a>
-        <br>
-        <small>Based off of the <a href="https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0">SSD Tier List Spreadsheet</a> </small>
-    </footer>
-  
-  </body>
+    </div>
 
-  </html>
+    <script>
+        window.onload = function() {
+            const generateBtn = document.getElementById('generate-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const printBtn = document.getElementById('print-btn');
+            const modalBackdrop = document.getElementById('modal-backdrop');
+
+            generateBtn.addEventListener('click', () => {
+                const party1 = (document.getElementById('party-1').value || '[Contracting Party]').toUpperCase();
+                const party2 = (document.getElementById('party-2').value || '[Counterparty]').toUpperCase();
+                const activity = document.getElementById('activity').value || '[Subject Matter of Agreement]';
+                const bindingEvent = document.getElementById('binding-event').value || '[Binding Event]';
+                const consequence = document.getElementById('consequence').value || '[Specific Remedy for Breach]';
+                const state = (document.getElementById('state-input').value || '[STATE]').toUpperCase();
+                
+                const contractText = `
+DISCLAIMER: THIS DOCUMENT IS A FICTIONAL SIMULATION FOR ILLUSTRATIVE PURPOSES ONLY AND IS NOT INTENDED TO BE, NOR SHOULD IT BE CONSTRUED AS, A LEGALLY BINDING CONTRACT OR LEGAL ADVICE.
+
+***
+
+AGREEMENT
+
+THIS AGREEMENT is made and entered into this ${new Date().toLocaleDateString()}, by and between:
+
+${party1}
+(hereinafter referred to as the "Contracting Party")
+
+AND
+
+${party2}
+(hereinafter referred to as the "Counterparty")
+
+(collectively, the "Parties").
+
+WITNESSETH:
+
+WHEREAS, the Parties have agreed to enter into a formal arrangement regarding the Activity, and
+WHEREAS, the Parties acknowledge the inherent risks and responsibilities associated with the Activity and agree to the terms herein to delineate and manage said responsibilities;
+
+NOW, THEREFORE, in consideration of the mutual covenants contained herein and for other good and valuable consideration, the receipt and sufficiency of which is hereby acknowledged, the Parties agree as follows:
+
+ARTICLE 1.0. SCOPE AND SUBJECT MATTER
+1.1. Subject Matter. The subject matter of this Agreement is defined as:
+"${activity}"
+1.2. Responsibilities. Each Party shall be solely responsible for its own actions and omissions in relation to the Activity from and after the Binding Event.
+
+ARTICLE 2.0. COVENANTS AND BINDING EFFECT
+2.1. Binding Event. This Agreement shall become fully binding and enforceable upon the occurrence of the following event, which shall be known as the "Binding Event":
+"${bindingEvent}"
+
+ARTICLE 3.0. REMEDIES FOR BREACH
+3.1. Liquidated Damages and Equitable Relief. In the event that a Party breaches any material term or condition of this Agreement, the following remedy shall apply:
+"${consequence}"
+
+ARTICLE 4.0. MISCELLANEOUS PROVISIONS
+4.1. Governing Law. This Agreement and any action related thereto shall be governed by and construed in accordance with the internal laws of the State of ${state}, without giving effect to any choice or conflict of law provision or rule (whether of the State of ${state} or any other jurisdiction) that would cause the application of the laws of any jurisdiction other than those of the State of ${state}.
+4.2. Severability. If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+4.3. Entire Agreement. This Agreement constitutes the entire understanding between the Parties and supersedes all prior discussions, agreements, or understandings, whether oral or in writing.
+
+ARTICLE 5.0. EXECUTION
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the date first above written.
+
+______________________________________
+Signature
+Printed Name: ${party1}
+
+______________________________________
+Signature
+Printed Name: ${party2}
+                `;
+                document.getElementById('final-contract').textContent = contractText.trim();
+                modalBackdrop.classList.remove('hidden');
+                modalBackdrop.classList.add('flex');
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                modalBackdrop.classList.add('hidden');
+                modalBackdrop.classList.remove('flex');
+            });
+            
+            modalBackdrop.addEventListener('click', (event) => {
+                if (event.target === modalBackdrop) {
+                    modalBackdrop.classList.add('hidden');
+                    modalBackdrop.classList.remove('flex');
+                }
+            });
+
+            printBtn.addEventListener('click', () => {
+                // Open the print dialog
+                window.print();
+            });
+        };
+    </script>
+</body>
+</html>
