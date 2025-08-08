@@ -73,9 +73,10 @@
                 white-space: pre-wrap;
                 width: 100%;
                 /* Using padding to create a clean, full-page look with margins */
-                padding: 1cm;
+                padding: 0.65cm;
                 box-sizing: border-box;
-                font-size: 1rem;
+                font-size: 0.75rem;
+                line-height: 1.15;
             }
         }
     </style>
@@ -145,7 +146,7 @@
 
             <section id="signature" class="text-center bg-zinc-950 p-6 rounded-lg shadow-md border border-zinc-800">
                 <h3 class="text-2xl font-bold mb-3 text-gray-50">Finalize Document</h3>
-                <p class="text-gray-400 mb-6">By clicking the button below, you will generate a complete, formal agreement based on the information provided, ready for printing and signature by all parties. The document includes a simulated legal disclaimer.</p>
+                <p class="text-gray-400 mb-6">By clicking the button below, you will generate a complete, formal agreement based on the information provided, ready for printing and signature by all parties.</p>
                 <button id="generate-btn" class="bg-sky-700 text-white font-bold py-3 px-8 rounded-lg hover:bg-sky-800 transition-colors text-lg">
                     Generate Legal Agreement
                 </button>
@@ -184,8 +185,6 @@
                 const state = (document.getElementById('state-input').value || '[STATE]').toUpperCase();
                 
                 const contractText = `
-DISCLAIMER: THIS DOCUMENT IS A FICTIONAL SIMULATION FOR ILLUSTRATIVE PURPOSES ONLY AND IS NOT INTENDED TO BE, NOR SHOULD IT BE CONSTRUED AS, A LEGALLY BINDING CONTRACT OR LEGAL ADVICE.
-
 ***
 
 AGREEMENT
